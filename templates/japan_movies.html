@@ -2,43 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>日本电影</title>
+        <style>
+        #login{
+            display:inline-block;
+            float:right;
+            margin-right:50px;
+        }
+        </style>
 </head>
 <body>
 <p1 style="font-size: 24px;margin-left:100px">日韩电影</p1>
+<div id="login" style="font-size: 24px"><a href="/">回到主页</a></div>        
 				<ul style="font-size:16px;margin-left:125px;margin-top:55px;">
-<li><a href="https://movie.douban.com/subject/34971728/
-">哆啦A梦：大雄的地球交响乐</a><br>
-
-哆啦A梦：大雄的地球交响乐
-2024 / 日本 / 科幻 动画 奇幻 冒险 / 今井一晓 / 水田山葵 大原惠美
-6.7</li>
- <li><a href="https://movie.douban.com/subject/36467351/
-">千与千寻</a><br>
-
-千与千寻  / 千と千尋の神隠し  / 神隐少女(台) / 千与千寻的神隐
-导演: 宫崎骏 Hayao Miyazaki   主演: 柊瑠美 Rumi Hîragi / 入野自由 Miy...
-2001 / 日本 / 剧情 动画 奇幻
-
- 9.4 2344646人评价
-最好的宫崎骏，最好的久石让。</li>                   
-<li><a href="https://movie.douban.com/subject/35503073/
-">星际穿越</a></li>
-<li><a href="https://movie.douban.com/subject/35742980/
-">钢铁侠</a></li>
-<li><a href="https://movie.douban.com/subject/35914398/
-">哥斯拉</a></li>
-<li><a href="https://movie.douban.com/subject/36467351/
-">环太平洋</a></li>
-<li><a href="https://movie.douban.com/subject/35490167/
-">破墓</a></li>
-<li><a href="https://movie.douban.com/subject/35410336/
-">噬血芭蕾</a></li>
-<li><a href="https://movie.douban.com/subject/35611467/
-">天气之子</a></li>
-<li><a href="https://movie.douban.com/subject/30359440/
-">霸王别姬</a></li>
-<li><a href="https://movie.douban.com/subject/35750081/
-">美国内战</a></li>
+{% for movie in japanmovies %}
+                        <li><a href="{{ movie.href }}">{{ movie.name }}</a><br>
+                        上映日期：{{ movie.time }}<br>
+                        导演：{{ movie.director }}<br>
+                        简介：{{ movie.introduction }}<br>
+                        </li>
+                    {% endfor %}
 				</ul>
 </html>
