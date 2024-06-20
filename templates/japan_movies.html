@@ -17,10 +17,8 @@
 				<ul style="font-size:16px;margin-left:125px;margin-top:55px;">
 {% for movie in japanmovies %}
                         <li><a href="{{ movie.href }}">{{ movie.name }}</a><br>
-                        上映日期：{{ movie.time }}<br>
-                        导演：{{ movie.director }}<br>
-                        简介：{{ movie.introduction }}<br>
-                        </li>
+                            演员：{{ movie.actor }}<br>
+                        <img src="{{ movie.img }}" width="100" height="150">
                     {% endfor %}
 				</ul>
 </html>

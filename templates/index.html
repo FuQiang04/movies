@@ -26,7 +26,10 @@
                 float:right;
                 margin-right:50px;
             }
-			
+			#search{
+                display:inline-block;
+                margin-top:44px;
+            }
 		</style>
 	</head>
 	<body>
@@ -38,12 +41,25 @@
                     <a href="America_movies">欧美电影</a>
                 </span>
 			</div>
+            <hr>
+    
+<div style="display: flex; justify-content: center;">
+    <form method="post" action="{% url 'search' %}" style="display: inline-block;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">搜索</button>
+    </form>
+</div>
+
             <div id="login" style="font-size: 24px"><a href="admin/">登陆</a></div>
 			<div id='menus'>
                 <p style="font-size: 22px;margin-left:100px;margin-top:48px">最新电影:</p>
 				<ul style="font-size:16px;margin-left:125px;margin-top:55px;">
                     {% for movie in newmovies %}
-                        <li><a href="{{ movie.href }}">{{ movie.name }}</a></li>
+                        <li><a href="{{ movie.href }}">{{ movie.name }}</a><br>
+                            演员：{{ movie.actor }}<br>
+                        <img src="{{ movie.img }}" width="100" height="150">
+                        </li>
                     {% endfor %}
                         </ul>
 			</div>
@@ -53,10 +69,8 @@
 				<ul style="font-size:16px;margin-left:0px;margin-top:55px;">
                     {% for movie in recommendmovies %}
                         <li><a href="{{ movie.href }}">{{ movie.name }}</a><br>
-                        上映日期：{{ movie.time }}<br>
-                        导演：{{ movie.director }}<br>
-                        简介：{{ movie.introduction }}<br>
-                        </li>
+                            演员：{{ movie.actor }}<br>
+                        <img src="{{ movie.img }}" width="100" height="150">
                     {% endfor %}
                         </ul>
 			</div>
