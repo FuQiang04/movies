@@ -19,3 +19,5 @@ login.html是登陆页面
 urls.py定义了访问链接
 
 views.py则实现了重定向
+
+crawl.py是爬虫
