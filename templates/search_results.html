@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>搜索结果</title>
+    <style>
+        #login{
+            display:inline-block;
+            float:right;
+            margin-right:50px;
+        }
+        </style>
 </head>
 <body>
 {% for movie in results %}
@@ -16,5 +23,6 @@
 {% empty %}
     <p>没有找到结果</p>
 {% endfor %}
+<div id="login" style="font-size: 24px"><a href="/">回到主页</a></div>
 </body>
 </html>
