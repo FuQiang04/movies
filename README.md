@@ -23,5 +23,4 @@ views.py则实现了重定向
 crawl.py是爬虫
 
 
-首页展示
-https://i-blog.csdnimg.cn/blog_migrate/7190cfa0c5fee32db879eb82d7df633a.png
+具体细节请访问https://blog.csdn.net/weixin_48749340/article/details/134421608
