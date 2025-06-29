@@ -21,3 +21,7 @@ urls.py定义了访问链接
 views.py则实现了重定向
 
 crawl.py是爬虫
+
+
+首页展示
+https://i-blog.csdnimg.cn/blog_migrate/7190cfa0c5fee32db879eb82d7df633a.png
